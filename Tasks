@@ -1,0 +1,242 @@
+Task 1:
+import java.util.Scanner;
+public class Main {
+   public static void main(String[] args) {
+
+
+       Scanner read = new Scanner(System.in);
+
+
+       int num = 5;
+       System.out.println("You have 3 attempts to guess the correct number between 1-10! \nWhat is your first guess: ");
+
+
+       int a = read.nextInt();
+
+
+       if (a == num) {
+
+
+           System.out.println("You guessed correctly! Congratulations!");
+       }
+       if (a < 5){
+
+
+           System.out.println("Your guess is less than the number! \nGuesses remaining: 2");
+       }
+       if (a > 5){
+
+
+           System.out.println("Your guess is more than the number! \nGuesses remaining: 2");
+       }
+
+
+       System.out.println("You have 2 attempts to guess the correct number between 1-10! \nWhat is your second guess: ");
+       int b = read.nextInt();
+       if (b == num) {
+
+
+           System.out.println("You guessed correctly! Congratulations!");
+       }
+       if (b < 5){
+
+
+           System.out.println("Your guess is less than the number! \nGuesses remaining: 1");
+       }
+       if (b > 5){
+
+
+           System.out.println("Your guess is more than the number! \nGuesses remaining: 1");
+       }
+
+
+        System.out.println("You have 1 attempt to guess the correct number between 1-10! \nWhat is your second guess: ");
+       int c = read.nextInt();
+       if (c == num) {
+
+
+           System.out.println("You guessed correctly! Congratulations!");
+       }
+       if (c < 5){
+
+
+           System.out.println("Your guess is less than the number! \nGuesses remaining: 0 \n Game over!");
+       }
+       if (c > 5){
+
+
+           System.out.println("Your guess is more than the number! \nGuesses remaining: 0 \n Game over!");
+       }
+
+
+
+
+
+
+   }
+}
+
+
+Task 2:
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+
+
+
+
+      Scanner read = new Scanner(System.in);
+
+
+      System.out.println("A1");
+      System.out.println("A2");
+      System.out.println("C3");
+      System.out.println("D4");
+      System.out.println("Code of product you want to purchase: ");
+
+
+      String choice = read.nextLine();
+
+
+      switch (choice) {
+
+
+          case "A1":
+              System.out.println("Soda \nPrice - $1.50");
+              break;
+
+
+          case "A2":
+              System.out.println("Chips \nPrice - $1.25");
+              break;
+
+
+          case "C3":
+              System.out.println("Candy \nPrice - $0.75");
+              break;
+
+
+          case "D4":
+              System.out.println("Water \nPrice - $1.00");
+              break;
+
+
+          default:
+              System.out.println("Invalid product");
+              break;
+
+
+      }
+  }
+}
+
+
+Task 3:
+
+import java.util.Scanner;
+public class Main {
+   public static void main(String[] args) {
+
+
+
+
+       Scanner read = new Scanner(System.in);
+
+
+
+
+       System.out.println("Choose a category (1, 2, 3): ");
+       System.out.println("(1)Science");
+       System.out.println("(2)History");
+       System.out.println("(3)Sports");
+
+
+
+
+       String a = "";
+       String b = "";
+       byte choice = read.nextByte();
+
+
+
+
+
+
+
+
+       switch (choice) {
+
+
+
+
+
+
+
+
+           case 1:
+               System.out.println("Question: What is the chemical symbol for water?");
+               a = "H2O";
+               b = read.next();
+               break;
+
+
+
+
+
+
+
+
+           case 2:
+               System.out.println("Question: What year did WWII start?");
+               a = "1939";
+               b = read.next();
+               break;
+
+
+
+
+           case 3:
+               System.out.println("Question: How many players are there on a football team?");
+               a = "11";
+               b = read.next();
+               break;
+
+
+
+
+
+
+
+
+           default:
+               System.out.println("Invalid category choice");
+               break;
+
+
+
+
+
+
+
+
+       }
+
+
+
+
+       if (a.equals(b)){
+           System.out.println("You are correct!");
+
+
+
+
+       }
+       else {
+           System.out.println("You are not correct! \nAnswer is: " + a);
+       }
+
+
+
+
+   }
+}
